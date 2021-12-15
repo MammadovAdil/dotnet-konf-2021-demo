@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputPath>../../artifacts/ContainerDemo.Web/$(Configuration)</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContainerDemo.Contracts\ContainerDemo.Contracts.csproj" />
+    <ProjectReference Include="..\ContainerDemo.Services\ContainerDemo.Services.csproj" />
+  </ItemGroup>
+
+</Project>

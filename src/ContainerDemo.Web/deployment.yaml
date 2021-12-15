@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-konf-demo-deployment
+  labels:
+    app: dotnet-konf-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnet-konf-demo
+  template:
+    metadata:
+      labels:
+        app: dotnet-konf-demo
+    spec:
+      containers:
+      - name: dotnet-konf-container
+        image: mammadovadil/dotnet-konf-demo
+        ports:
+        - containerPort: 80
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnet-konf-service
+spec:
+  selector:
+    app: dotnet-konf-demo
+  ports:
+    - port: 8080
+      targetPort: 80
+  type: LoadBalancer

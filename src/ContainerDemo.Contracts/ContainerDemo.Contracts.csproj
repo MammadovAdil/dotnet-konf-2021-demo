@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <OutputPath>../../artifacts/ContainerDemo.Contracts/$(Configuration)</OutputPath>
+  </PropertyGroup>
+
+</Project>
